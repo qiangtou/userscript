@@ -2,6 +2,8 @@
 全面支持firefox,chrome!!!!!
 使用说明：firefox要装greasemonkey,chrome要装tampermonkey
 
+全面支持V8新版，同时兼容旧版
+
 ###功能
 让qq空间清爽。
 默认清除了应用，拍拍广告和今日热点。
