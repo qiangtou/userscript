@@ -6,16 +6,19 @@
 // @updateURL    https://userscripts.org/scripts/source/153004.meta.js
 // @downloadURL  https://userscripts.org/scripts/source/153004.user.js
 // @grant        unsafeWindow
-// @version      2013-11-29 15:08:38
+// @version      2013-12-05 11:24:14
 // ==/UserScript==
 
 (function(w){ 
     //默认的需要删除的class数组，可自行添加，删除
     var classArr = ['fn_gdtads', 'fn_paipai', 'fn_mayKnow', 'fn_openvip','fn_guanxiquan','fn_fnrecm','fn_birthdayGuy'],
     idArr = ['div_corner_ad_container','QM_My_App_Container','idQbossHotbar'],
-    filterStr=['我的空间积分','转载','QQ超市','QQ农场','和QQ好友一起玩游戏','设置背景音乐','官方Qzone','添加了应用',
-	'我要把所有的动物','我和好友们都在玩','赶紧送礼物祝他生日快乐吧','赶紧送礼物祝她生日快乐吧','发起的投票','让自己的空间与众不同','我刚刚在QQ空间领到预约码',
-	'#玩得酷，靠得住#火箭加速冲，直达广寒宫'];
+    filterStr={
+		content:['我的空间积分','转载','QQ超市','QQ农场','和QQ好友一起玩游戏','设置背景音乐','添加了应用',
+			'我要把所有的动物','我和好友们都在玩','赶紧送礼物祝他生日快乐吧','赶紧送礼物祝她生日快乐吧','发起的投票','让自己的空间与众不同','我刚刚在QQ空间领到预约码',
+		'#玩得酷，靠得住#火箭加速冲，直达广寒宫'],
+		name:['官方Qzone','QQ空间']
+	};
 
 	//v8使用模块加载系统，只能这样加一个检测方法了
     //超时检测，在规定时间内轮循f，直到为真则执行cb
@@ -72,7 +75,7 @@
             //过滤消息内容
             arr=arr.concat(this._fromContent());
             //过滤用户
-            arr=arr.concat(this._fromUser());
+            arr=arr.concat(this._fromName());
             return arr;
         },
         //内容
@@ -80,17 +83,16 @@
             var arr=_class('f_info');
 			//v8
 			arr=arr.concat(_class('f-info'));
-			arr=arr.concat(_class('f-info'));
-            arr=this._filter(arr); 
+			arr=arr.concat(_class('qz_summary'));
+            arr=this._filter(arr,'content'); 
             return arr;
         },
         //用户名
-        _fromUser:function(){
+        _fromName:function(){
             var arr=_class('f_nick');
 			//v8
 			arr=arr.concat(_class('f-nick'));
-			arr=arr.concat(_class('qz_summary'));
-            arr=this._filter(arr); 
+            arr=this._filter(arr,'name'); 
             return arr;
         },
         //文本
@@ -103,13 +105,14 @@
             t=t.replace(/\s/g,'');
             return t;
         },
-        _filter:function(arr){
-            var html,item,i,j,retArr=[];
+        _filter:function(arr,type){
+            var html,item,i,j,retArr=[],
+			filter=filterStr[type];
             for(i=arr.length;i--;){
                 item=arr[i];
                 html=this._text(item);
-                for(j=filterStr.length;j--;){
-                    if(html.indexOf(filterStr[j])!=-1){
+                for(j=filter.length;j--;){
+                    if(html.indexOf(filter[j])!=-1){
                         var p=item.parentElement.parentElement.parentElement;
                         retArr.push(p);break;
                     }
