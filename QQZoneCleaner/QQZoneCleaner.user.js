@@ -6,7 +6,7 @@
 // @updateURL    https://userscripts.org/scripts/source/153004.meta.js
 // @downloadURL  https://userscripts.org/scripts/source/153004.user.js
 // @grant        unsafeWindow
-// @version      2013-12-05 11:24:14
+// @version      2013-12-06 09:18:26
 // ==/UserScript==
 
 (function(w){ 
@@ -14,7 +14,7 @@
     var classArr = ['fn_gdtads', 'fn_paipai', 'fn_mayKnow', 'fn_openvip','fn_guanxiquan','fn_fnrecm','fn_birthdayGuy'],
     idArr = ['div_corner_ad_container','QM_My_App_Container','idQbossHotbar'],
     filterStr={
-		content:['我的空间积分','转载','QQ超市','QQ农场','和QQ好友一起玩游戏','设置背景音乐','添加了应用',
+		content:['收藏音乐','我的空间积分','转载','QQ超市','QQ农场','和QQ好友一起玩游戏','设置背景音乐','添加了应用',
 			'我要把所有的动物','我和好友们都在玩','赶紧送礼物祝他生日快乐吧','赶紧送礼物祝她生日快乐吧','发起的投票','让自己的空间与众不同','我刚刚在QQ空间领到预约码',
 		'#玩得酷，靠得住#火箭加速冲，直达广寒宫'],
 		name:['官方Qzone','QQ空间']
