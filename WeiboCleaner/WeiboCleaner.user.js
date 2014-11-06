@@ -33,8 +33,10 @@ $('#v6_pl_ad_bottomtip')
 .add('#v6_pl_content_biztips')
 .add('#v6_pl_rightmod_recominfo')
 .add('#v6_pl_rightmod_ads36')
+.add('#v6_pl_rightmod_ads35')
 .add('#WB_webim')
 .add('[feedtype=ad]')
+.add('[node-type=feed_spread]')
 .add('#v6_pl_rightmod_noticeboard').remove();
 },400);
 
