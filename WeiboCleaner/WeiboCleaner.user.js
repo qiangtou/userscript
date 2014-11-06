@@ -34,6 +34,7 @@ $('#v6_pl_ad_bottomtip')
 .add('#v6_pl_rightmod_recominfo')
 .add('#v6_pl_rightmod_ads36')
 .add('#WB_webim')
+.add('[feedtype=ad]')
 .add('#v6_pl_rightmod_noticeboard').remove();
 },400);
 
