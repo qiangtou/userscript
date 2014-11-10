@@ -4,7 +4,7 @@
 // @namespace    http://weibo.com/qiangtoutou
 // @include      http://*weibo.com/*
 // @grant        unsafeWindow
-// @version      2014-11-06 22:39:06
+// @version      2014-11-10 17:44:11
 // ==/UserScript==
 (function(){ 
     var $=function(selector){ 
