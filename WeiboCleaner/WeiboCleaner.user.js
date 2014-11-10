@@ -40,6 +40,7 @@
         .add('[feedtype=ad]')
         .add('[node-type=feed_spread]')
         .add('#v6_trustPagelet_recom_member')
+        .add('[node-type=recommendTopic]')
         .add('#v6_pl_rightmod_noticeboard').remove();
         
         $('#v6_pl_rightmod_recominfo>div').each(function(module){            
