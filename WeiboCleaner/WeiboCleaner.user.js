@@ -4,7 +4,8 @@
 // @namespace    http://weibo.com/qiangtoutou
 // @include      http://*weibo.com/*
 // @grant        unsafeWindow
-// @version      2014-11-10 17:44:11
+// @updateURL    https://github.com/qiangtou/userscript/raw/master/WeiboCleaner/WeiboCleaner.user.js
+// @version      2014-12-01 20:50:05
 // ==/UserScript==
 (function(){ 
     var $=function(selector){ 
