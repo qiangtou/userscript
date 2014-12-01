@@ -3,10 +3,10 @@
 // @description  清爽的qq空间
 // @namespace    http://weibo.com/qiangtoutou
 // @include      http://*.qzone.qq.com/*
-// @updateURL    https://userscripts.org/scripts/source/153004.meta.js
-// @downloadURL  https://userscripts.org/scripts/source/153004.user.js
+// @updateURL    https://github.com/qiangtou/userscript/raw/master/QQZoneCleaner/QQZoneCleaner.user.js
+// @downloadURL  https://github.com/qiangtou/userscript/raw/master/QQZoneCleaner/QQZoneCleaner.user.js
 // @grant        unsafeWindow
-// @version      2013-12-06 09:18:26
+// @version      2014-12-01 20:59:41
 // ==/UserScript==
 
 (function(w){ 
