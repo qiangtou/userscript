@@ -5,7 +5,7 @@
 // @include      http://*weibo.com/*
 // @grant        unsafeWindow
 // @updateURL    https://github.com/qiangtou/userscript/raw/master/WeiboCleaner/WeiboCleaner.user.js
-// @version      2014-12-01 20:50:05
+// @version      2015-06-17 21:51:05
 // ==/UserScript==
 (function(){ 
     var $=function(selector){ 
@@ -34,10 +34,12 @@
     setInterval(function(){
         $('#v6_pl_ad_bottomtip')
         .add('#v6_pl_rightmod_updatev6')
+        .add('#v6_TrustPagelet_Recom_MusicRank')
         .add('#v6_pl_content_biztips')
         .add('#v6_pl_rightmod_ads36')
         .add('#v6_pl_rightmod_ads35')
         .add('#WB_webim')
+        .add('.WB_ad_tm2015')
         .add('[feedtype=ad]')
         .add('[node-type=feed_spread]')
         .add('#v6_trustPagelet_recom_member')
@@ -46,9 +48,14 @@
         
         $('#v6_pl_rightmod_recominfo>div').each(function(module){            
             var title=module.querySelector('.main_title a');
-            if(title&&title.innerHTML=='可能感兴趣的人'){
-                console.log(module,'被移除')
-                module.remove();
+            if(title){
+                var title=title.innerHTML;               
+                '可能感兴趣的人,电影预售榜'.split(',').forEach(function(t){                   
+                    if(title.indexOf(t)>-1){
+                         console.log(module,'被移除')
+                         module.remove();
+                    }                    
+                });               
             }
         });
     },400);
