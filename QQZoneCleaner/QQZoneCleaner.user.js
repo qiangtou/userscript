@@ -11,7 +11,7 @@
 
 (function(w){ 
     //默认的需要删除的class数组，可自行添加，删除
-    var classArr = ['fn_gdtads', 'fn_paipai', 'fn_mayKnow', 'fn_openvip','fn_guanxiquan','fn_fnrecm','fn_birthdayGuy'],
+    var classArr = ['fn_gdtads', 'fn_paipai', 'fn_mayKnow', 'fn_openvip','fn_guanxiquan','fn_fnrecm','fn_birthdayGuy','feed-hot'],
     idArr = ['div_corner_ad_container','QM_My_App_Container','idQbossHotbar'],
     filterStr={
 		content:['收藏音乐','我的空间积分','转载','QQ超市','QQ农场','和QQ好友一起玩游戏','设置背景音乐','添加了应用',
