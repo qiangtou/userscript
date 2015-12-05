@@ -5,7 +5,7 @@
 // @include      http://*weibo.com/*
 // @grant        unsafeWindow
 // @updateURL    https://github.com/qiangtou/userscript/raw/master/WeiboCleaner/WeiboCleaner.user.js
-// @version      2015-06-17 21:51:05
+// @version      2015年12月6日01时02分04秒
 // ==/UserScript==
 (function(){ 
     var $=function(selector){ 
@@ -33,6 +33,8 @@
     }    
     setInterval(function(){
         $('#v6_pl_ad_bottomtip')
+        .add('#v6_pl_rightmod_attfeed')//好友关注动态
+        .add('#v6_pl_rightmod_rank')//亚洲好书榜实时趋势
         .add('#v6_pl_rightmod_updatev6')
         .add('#v6_TrustPagelet_Recom_MusicRank')
         .add('#v6_pl_content_biztips')
