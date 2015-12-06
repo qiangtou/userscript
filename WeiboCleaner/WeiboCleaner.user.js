@@ -5,7 +5,7 @@
 // @include      http://*weibo.com/*
 // @grant        unsafeWindow
 // @updateURL    https://github.com/qiangtou/userscript/raw/master/WeiboCleaner/WeiboCleaner.user.js
-// @version      2015年12月6日01时02分04秒
+// @version      2015-12-06 17:04:00
 // ==/UserScript==
 (function(){ 
     var $=function(selector){ 
